@@ -35,7 +35,7 @@ function numberOfCharacters(string) {
     for (let letra in abece) {
       if (letra === string[i]) {
         abece[letra] = abece[letra] + 1;
-        contadorLetras[letra] = abece[letra];
+        contadorLetras = contadorLetras + abece[letra];
       }
     }
     /*for (let letra in abece) {
@@ -56,9 +56,9 @@ function capToFront(s) {
   var minus = "";
   for (let i = 0; i < s.lenght; i++) {
     if (s[i] === s[i].toUpperCase) {
-      mayus = mayus + s.charAt(s[i]);
+      mayus = mayus + s.charAt(i);
     } else {
-      minus = minus + s.charAt(s[i]);
+      minus = minus + s.charAt(i);
     }
   }
   return mayus + minus;
@@ -75,7 +75,7 @@ function asAmirror(str) {
   for (let i = 0; i < str.lenght; i++) {
     if (str[i] === " ") {
       for (let j = i - 1; j > 0 || str[j] === " "; j--) {
-       textoInv = textoInv + str.charAt(str[j]);
+       textoInv = textoInv + str.charAt(j);
       }
       textoInv = textoInv + " ";
     }
