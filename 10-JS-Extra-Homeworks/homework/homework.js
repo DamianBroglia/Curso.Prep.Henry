@@ -35,7 +35,7 @@ function numberOfCharacters(string) {
     for (let letra in abece) {
       if (letra === string[i]) {
         abece[letra] = abece[letra] + 1;
-        contadorLetras = contadorLetras + abece[letra];
+        contadorLetras[letra] = abece[letra];
       }
     }
     /*for (let letra in abece) {
