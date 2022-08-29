@@ -57,7 +57,8 @@ function capToFront(s) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] === texMay[i]) {
       mayus = mayus + s.charAt(i);
-    } else {
+    } 
+    if (s[i] !== texMay[i]) {
       minus = minus + s.charAt(i);
     }
   }
@@ -73,10 +74,9 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = str.length; j > i; j--) {
+      for (let j = str.length; j >= i; j--) {
         textoInv = textoInv + str.charAt(j);
       }
-      textoInv = textoInv + " ";
     }
   }
   return textoInv;
