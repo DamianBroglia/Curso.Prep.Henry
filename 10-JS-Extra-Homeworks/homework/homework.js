@@ -31,7 +31,7 @@ function numberOfCharacters(string) {
     v: 0, w: 0, x: 0, y: 0, z: 0
   };
   var contadorLetras = {};
-  for (let i = 0; i < string.lenght; i++) {
+  for (let i = 0; i < string.length; i++) {
     for (let letra in abece) {
       if (letra === string[i]) {
         abece[letra] = abece[letra] + 1;
@@ -54,7 +54,7 @@ function capToFront(s) {
   //Escribe tu código aquí
   var mayus = "";
   var minus = "";
-  for (let i = 0; i < s.lenght; i++) {
+  for (let i = 0; i < s.length; i++) {
     if (s[i] === s[i].toUpperCase) {
       mayus = mayus + s.charAt(i);
     } else {
@@ -64,7 +64,7 @@ function capToFront(s) {
   return mayus + minus;
 }
 
-
+String.l
 function asAmirror(str) {
   //La función recibe una frase. 
   //Escribe una función que tome la frase recibida y la devuelva de modo tal que se pueda leer de izquierda a derecha 
@@ -72,7 +72,7 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
   var textoInv = "";
-  for (let i = 0; i < str.lenght; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
       for (let j = i - 1; j > 0 || str[j] === " "; j--) {
        textoInv = textoInv + str.charAt(j);
@@ -104,8 +104,8 @@ function capicua(numero) {
     return "No es capicua";
   }*/
   var numInv = 0;
-  var j = numero.lenght - 1;
-  for (let i = 0; i < numero.lenght; i++) {
+  var j = numero.length - 1;
+  for (let i = 0; i < numero.length; i++) {
     numInv[i] = numero[j - i];
     if (numInv === numero) {
       return "Es capicua";
@@ -121,7 +121,7 @@ function deleteAbc(cadena) {
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 var nuevaCadena = ""; 
-  for (let i = 0; i < cadena.lenght; i++) {
+  for (let i = 0; i < cadena.length; i++) {
     if (cadena[i] !== "a" && cadena[i] !== "b" && cadena[i] !== "c") {
      nuevaCadena = nuevaCadena + cadena.charAt(cadena[i]);
     }
@@ -135,7 +135,7 @@ function sortArray(arr) {
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
   let newArray = [];
-  for (let i = 0; i < arr.lenght; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] < arr[i + 1]) {
       newArray.unshift(arr[i]);
     } else {
@@ -153,8 +153,8 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
   let newArray = [];
-  for (let i = 0; i < arreglo1.lenght; i++) {
-    for (let j = 0; j < arreglo2.lenght; j++) {
+  for (let i = 0; i < arreglo1.length; i++) {
+    for (let j = 0; j < arreglo2.length; j++) {
       if (arreglo1[i] === arreglo2[j]) {
         newArray.push(arreglo1[i]);
       }
