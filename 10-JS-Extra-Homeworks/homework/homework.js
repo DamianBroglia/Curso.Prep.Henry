@@ -73,7 +73,7 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = str.length - 1; j > i; j--) {
+      for (let j = str.length; j > i; j--) {
         textoInv = textoInv + str.charAt(j);
       }
       textoInv = textoInv + " ";
@@ -90,7 +90,7 @@ function capicua(numero) {
   //Escribe tu código aquí
 
   let suma = 0;
-  let j = numero.lenght - 1; 
+  let j = numero.length - 1; 
   for (let i = 0; i < numero.length / 2; i++){
     if (numero[i] === numero[j]){
       j--;
