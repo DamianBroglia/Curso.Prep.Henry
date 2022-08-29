@@ -40,7 +40,7 @@ function numberOfCharacters(string) {
   }
   for (let letra in abece) {
     if (abece[letra] > 0) {
-      contadorLetras = contadorLetras + abece[letra];
+      contadorLetras[letra] = abece[letra];
     }
   }
   return contadorLetras;
@@ -53,8 +53,9 @@ function capToFront(s) {
   //Escribe tu código aquí
   var mayus = "";
   var minus = "";
+  var texMay = s.toUpperCase;
   for (let i = 0; i < s.length; i++) {
-    if (s[i] === s[i].toUpperCase) {
+    if (s[i] === texMay[i]) {
       mayus = mayus + s.charAt(i);
     } else {
       minus = minus + s.charAt(i);
@@ -72,7 +73,7 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = str.length - 1; j > 0 || str[j] === " "; j--) {
+      for (let j = str.length - 1; j > i; j--) {
         textoInv = textoInv + str.charAt(j);
       }
       textoInv = textoInv + " ";
@@ -88,20 +89,20 @@ function capicua(numero) {
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
-  /*let suma = 0;
+  let suma = 0;
   let j = numero.lenght - 1; 
-  for (let i = 0; i < numero.lenght / 2; i++){
+  for (let i = 0; i < numero.length / 2; i++){
     if (numero[i] === numero[j]){
       j--;
       suma++;
     }
   }
-  if (suma === numero.lenght / 2){
+  if (suma === numero.length / 2){
     return "Es capicua";
   }else{
     return "No es capicua";
-  }*/
-  var numInv = 0;
+  }
+  /*var numInv = 0;
   var j = numero.length - 1;
   for (let i = 0; i < numero.length; i++) {
     numInv[i] = numero[j - i];
@@ -110,7 +111,7 @@ function capicua(numero) {
     return "Es capicua";
   } else {
     return "No es capicua";
-  }
+  }*/
 }
 
 
@@ -134,7 +135,7 @@ function sortArray(arr) {
   //Escribe tu código aquí
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length < arr[i].length + 1) {
+    if (arr[i].length < arr[i+1].length) {
       newArray.unshift(arr[i]);
     } else {
       newArray.push(arr[i]);
