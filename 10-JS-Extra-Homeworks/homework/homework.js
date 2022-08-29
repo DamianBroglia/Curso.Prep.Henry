@@ -35,14 +35,13 @@ function numberOfCharacters(string) {
     for (let letra in abece) {
       if (letra === string[i]) {
         abece[letra] = abece[letra] + 1;
-        contadorLetras = contadorLetras + abece[letra];
       }
     }
-    /*for (let letra in abece) {
-      if (abece[letra] > 0) {
-        contadorLetras[letra] = abece[letra];
-      }
-    }*/
+  }
+  for (let letra in abece) {
+    if (abece[letra] > 0) {
+      contadorLetras = contadorLetras + abece[letra];
+    }
   }
   return contadorLetras;
 }
@@ -62,9 +61,8 @@ function capToFront(s) {
     }
   }
   return mayus + minus;
-}
+} 
 
-String.l
 function asAmirror(str) {
   //La función recibe una frase. 
   //Escribe una función que tome la frase recibida y la devuelva de modo tal que se pueda leer de izquierda a derecha 
@@ -74,8 +72,8 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = i - 1; j > 0 || str[j] === " "; j--) {
-       textoInv = textoInv + str.charAt(j);
+      for (let j = str.length - 1; j > 0 || str[j] === " "; j--) {
+        textoInv = textoInv + str.charAt(j);
       }
       textoInv = textoInv + " ";
     }
@@ -107,11 +105,11 @@ function capicua(numero) {
   var j = numero.length - 1;
   for (let i = 0; i < numero.length; i++) {
     numInv[i] = numero[j - i];
-    if (numInv === numero) {
-      return "Es capicua";
-    } else {
-      return "No es capicua";
-    }
+  }
+  if (numInv === numero) {
+    return "Es capicua";
+  } else {
+    return "No es capicua";
   }
 }
 
@@ -120,10 +118,10 @@ function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-var nuevaCadena = ""; 
+  var nuevaCadena = "";
   for (let i = 0; i < cadena.length; i++) {
     if (cadena[i] !== "a" && cadena[i] !== "b" && cadena[i] !== "c") {
-     nuevaCadena = nuevaCadena + cadena.charAt(cadena[i]);
+      nuevaCadena = nuevaCadena + cadena.charAt(i);
     }
   }
   return nuevaCadena;
@@ -136,7 +134,7 @@ function sortArray(arr) {
   //Escribe tu código aquí
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < arr[i + 1]) {
+    if (arr[i].length < arr[i].length + 1) {
       newArray.unshift(arr[i]);
     } else {
       newArray.push(arr[i]);
