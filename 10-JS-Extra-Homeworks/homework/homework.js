@@ -71,12 +71,14 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
   var textoInv = "";
+  var palabraInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
       for (let j = i - 1; j >= 0 || str[j] === " " ; j--) {
-        textoInv = textoInv + str.charAt(j);
+        palabraInv += str.charAt(j);
       }
     }
+    textoInv = textoInv + palabraInv + " ";
   }
   return textoInv;
 }
