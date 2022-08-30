@@ -108,9 +108,8 @@ function capicua(numero) {
   }*/
  
   var numInv = "";
-  var j = numero.length - 1;
-  for (let i = 0; i < numero.length; i++) {
-    numInv += numero.charAt(j - i);
+  for (let i = numero.length - 1; i > 0; i--) {
+    numInv += numero.charAt(i);
   }
   if (numInv == numero) {
     return "Es capicua";
