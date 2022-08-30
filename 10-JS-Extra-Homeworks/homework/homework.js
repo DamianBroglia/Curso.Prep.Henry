@@ -73,16 +73,16 @@ function asAmirror(str) {
   var textoInv = "";
   var palabra = 0;
   for (let i = 0; i < str.length; i++) {
-    palabra ++;
-   if (str[i] === " " || i === str.length -1){
-    for (let j = palabra - 1; j > i - palabra; j--) {
-      textoInv += str.charAt(j);
+    palabra++;
+    if (str[i] === " " || i === str.length - 1) {
+      for (let j = palabra - 1; j > i - palabra; j--) {
+        textoInv += str.charAt(j);
+      }
+      palabra = 0;
     }
-    palabra = 0;
   }
   return textoInv;
 }
-
 
 function capicua(numero) {
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
