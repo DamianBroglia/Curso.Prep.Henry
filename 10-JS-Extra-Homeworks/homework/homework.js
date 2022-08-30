@@ -56,13 +56,13 @@ function capToFront(s) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] === texMay[i]) {
       mayus = mayus + s.charAt(i);
-    } 
+    }
     if (s[i] !== texMay[i]) {
       minus = minus + s.charAt(i);
     }
   }
   return mayus + minus;
-} 
+}
 
 function asAmirror(str) {
   //La función recibe una frase. 
@@ -71,12 +71,16 @@ function asAmirror(str) {
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
   var textoInv = "";
+  var palabra = "";
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === " ") {
-      for (let j = i - 1; j >= 0 || str[j] === " " ; j--) {
-        textoInv += str.charAt(j);
-      }
+    do {
+      palabra += str.charAt(i);
     }
+    while (str[i] !== " ")
+    for (let j = i - 1; j > palabra.length ; j--) {
+      textoInv += str.charAt(j);
+    }
+    palabra = "";
   }
   return textoInv;
 }
@@ -104,7 +108,7 @@ function capicua(numero) {
   var numInv = "";
   var j = numero.length - 1;
   for (let i = 0; i < numero.length; i++) {
-    numInv = numInv + numero.charAt (j - i);
+    numInv = numInv + numero.charAt(j - i);
   }
   if (numInv === numero) {
     return "Es capicua";
