@@ -72,12 +72,16 @@ function asAmirror(str) {
   //Escribe tu código aquí
   var textoInv = "";
   var palabra = 0;
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i <= str.length; i++) {
     palabra++;
-    if (str[i] === " " || i === str.length - 1) {
-      for (let j = palabra - 1; j > i - palabra; j--) {
+    if (str[i] === " " || i === str.length) {
+      for (let j = i - 1; j > i - palabra; j--) {
         textoInv += str.charAt(j);
       }
+      if (i !== str.length) {
+        textoInv += " ";
+      }
+      palabra = 0;
     }
   }
   return textoInv;
