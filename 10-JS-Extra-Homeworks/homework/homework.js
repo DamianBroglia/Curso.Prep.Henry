@@ -108,10 +108,13 @@ function capicua(numero) {
   }*/
  
   var numInv = "";
-  for (let i = numero.length - 1; i > 0; i--) {
-    numInv += numero.charAt(i);
+  var numeroNormal = "";
+  var j = numero.length - 1;
+  for (let i = 0; i < numero.length; i++) {
+    numInv += numero.charAt(j - i);
+    numeroNormal += numero.charAt(i);
   }
-  if (numInv == numero) {
+  if (numInv == numeroNormal) {
     return "Es capicua";
   } else {
     return "No es capicua";
