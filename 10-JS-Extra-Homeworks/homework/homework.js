@@ -73,7 +73,7 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = i - 1; j > 0 || str[j] === " " ; j--) {
+      for (let j = i - 1; j >= 0 || str[j] === " " ; j--) {
         textoInv = textoInv + str.charAt(j);
       }
     }
