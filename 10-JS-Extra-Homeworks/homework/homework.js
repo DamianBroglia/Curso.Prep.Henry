@@ -115,7 +115,7 @@ function capicua(numero) {
     numeroNormal += numero.charAt(i);
     j--;
   }
-  if (numInv == numeroNormal) {
+  if (numInv === numeroNormal) {
     return "Es capicua";
   } else {
     return "No es capicua";
