@@ -17,7 +17,6 @@ function deObjetoAmatriz(objeto) {
   return array;
 }
 
-
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
@@ -74,7 +73,7 @@ function asAmirror(str) {
   var textoInv = "";
   for (let i = 0; i < str.length; i++) {
     if (str[i] === " ") {
-      for (let j = i - 1; j = 0 || str[j] === " "; j--) {
+      for (let j = i - 1; j > 0 || str[j] === " " ; j--) {
         textoInv = textoInv + str.charAt(j);
       }
     }
@@ -105,7 +104,7 @@ function capicua(numero) {
   var numInv = "";
   var j = numero.length - 1;
   for (let i = 0; i < numero.length; i++) {
-    numInv[i] = numero[j - i];
+    numInv = numInv + numero.charAt (j - i);
   }
   if (numInv === numero) {
     return "Es capicua";
@@ -135,7 +134,8 @@ function sortArray(arr) {
   //Escribe tu código aquí
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length < arr[i + 1].length) {
+    let j = i + 1;
+    if (arr[i].length < arr[j].length) {
       newArray.unshift(arr[i]);
     } else {
       newArray.push(arr[i]);
