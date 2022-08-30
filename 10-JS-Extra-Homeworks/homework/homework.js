@@ -78,7 +78,6 @@ function asAmirror(str) {
       for (let j = palabra - 1; j > i - palabra; j--) {
         textoInv += str.charAt(j);
       }
-      palabra = 0;
     }
   }
   return textoInv;
