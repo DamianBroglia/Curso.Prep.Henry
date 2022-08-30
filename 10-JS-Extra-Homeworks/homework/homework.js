@@ -111,8 +111,9 @@ function capicua(numero) {
   var numeroNormal = "";
   var j = numero.length - 1;
   for (let i = 0; i < numero.length; i++) {
-    numInv += numero.charAt(j - i);
+    numInv += numero.charAt(j);
     numeroNormal += numero.charAt(i);
+    j--;
   }
   if (numInv == numeroNormal) {
     return "Es capicua";
