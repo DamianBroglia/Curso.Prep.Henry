@@ -112,11 +112,12 @@ function capicua(numero) {
   for (let i = numero.length - 1; i >= 0; i--) {
     numInv += numero.charAt(i);
   }
-  if (numInv === numero) {
+  return numInv;
+  /*if (numInv === numero) {
     return "Es capicua";
   } else {
     return "No es capicua";
-  }
+  }*/
 }
 
 
