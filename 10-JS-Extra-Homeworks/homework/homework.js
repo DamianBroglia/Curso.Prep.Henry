@@ -61,7 +61,7 @@ function capToFront(s) {
       minus = minus + s.charAt(i);
     }
   }
-  return texMay;
+  return mayus + minus;
 }
 
 function asAmirror(str) {
