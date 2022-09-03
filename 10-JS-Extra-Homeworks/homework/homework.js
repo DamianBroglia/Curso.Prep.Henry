@@ -109,7 +109,7 @@ function capicua(numero) {
  
   var numInv = "";
   for (let i = numero.length - 1; i >= 0; i--) {
-    numInv += numero.charAt(i);
+    numInv += numero(i);
   }
   return numInv;
   /*if (numInv === numero) {
