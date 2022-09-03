@@ -122,8 +122,19 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-arr.sort(arr.length);
-return arr;
+  var hayCambio = true;
+  while (hayCambio) {
+    for (let i = 0; i < arr.length - 1; i++) {
+      hayCambio = false;
+      if (arr[i].length > arr[i + 1].length) {
+         var guardar = arr[i+1];
+         arr[i+1] = arr[i];
+         arr[i] = guardar;
+         hayCambio = true;
+      }
+    }
+  }
+  return arr;
 }
 
 
