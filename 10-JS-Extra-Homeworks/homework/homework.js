@@ -108,8 +108,9 @@ function capicua(numero) {
   }*/
  
   var numInv = "";
+  numero.toString();
   for (let i = numero.length - 1; i >= 0; i--) {
-    numInv += numero(i);
+    numInv += numero.chatAt(i);
   }
   return numInv;
   /*if (numInv === numero) {
