@@ -106,18 +106,17 @@ function capicua(numero) {
   }else{
     return "No es capicua";
   }*/
- 
+
   var numInv = "";
   numero.toString();
   for (let i = numero.length - 1; i >= 0; i--) {
-    numInv += numero.chatAt(i);
+    numInv += numero.charAt(i);
   }
-  return numInv;
-  /*if (numInv === numero) {
+  if (numInv === numero) {
     return "Es capicua";
   } else {
     return "No es capicua";
-  }*/
+  }
 }
 
 
