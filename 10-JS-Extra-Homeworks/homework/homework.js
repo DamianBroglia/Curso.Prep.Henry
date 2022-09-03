@@ -52,7 +52,7 @@ function capToFront(s) {
   //Escribe tu código aquí
   var mayus = "";
   var minus = "";
-  var texMay = s.toUpperCase;
+  var texMay = s.toUpperCase();
   for (let i = 0; i < s.length; i++) {
     if (s[i] === texMay[i]) {
       mayus = mayus + s.charAt(i);
