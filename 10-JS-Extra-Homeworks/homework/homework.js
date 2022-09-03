@@ -107,7 +107,7 @@ function capicua(numero) {
     return "No es capicua";
   }*/
  
-  var numInv = 0;
+  var numInv = "";
   for (let i = numero.length - 1; i >= 0; i--) {
     numInv += numero.charAt(i);
   }
