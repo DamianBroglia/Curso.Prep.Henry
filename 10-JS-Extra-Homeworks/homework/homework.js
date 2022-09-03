@@ -93,31 +93,14 @@ function capicua(numero) {
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
 
-  /*let suma = 0;
-  let j = numero.length - 1; 
-  for (let i = 0; i < numero.length; i++){
-    if (numero[i] === numero[j]){
-      suma++;
-    }
-    j--;
-  }
-  if (suma === numero.length){
-    return "Es capicua";
-  }else{
-    return "No es capicua";
-  }*/
+  var nuevoNumero = numero.toString();
+  var numInv = nuevoNumero.split("").reverse().join("");
 
-  var numInv = "";
-  numero.toString();
-  for (let i = numero.length - 1; i >= 0; i--) {
-    numInv = numInv + numero.charAt(i);
-  }
-  return numInv;
-  /*if (numInv === numero) {
+  if (numInv === nuevoNumero) {
     return "Es capicua";
   } else {
     return "No es capicua";
-  }*/
+  }
 }
 
 
