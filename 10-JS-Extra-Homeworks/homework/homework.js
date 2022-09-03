@@ -61,7 +61,7 @@ function capToFront(s) {
       minus = minus + s.charAt(i);
     }
   }
-  return mayus + minus;
+  return texMay;
 }
 
 function asAmirror(str) {
@@ -107,15 +107,11 @@ function capicua(numero) {
     return "No es capicua";
   }*/
  
-  var numInv = "";
-  var numeroNormal = "";
-  var j = numero.length - 1;
-  for (let i = 0; i < numero.length; i++) {
-    numInv += numero.charAt(j);
-    numeroNormal += numero.charAt(i);
-    j--;
+  var numInv = 0;
+  for (let i = numero.length - 1; i >= 0; i--) {
+    numInv += numero.charAt(i);
   }
-  if (numInv === numeroNormal) {
+  if (numInv === numero) {
     return "Es capicua";
   } else {
     return "No es capicua";
